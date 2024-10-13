@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import { ButtonExample } from './examples/button-example';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <p className='text-center text-blue-500'>Hello world</p>
-    </>
-  )
+    <div className="container mx-auto flex h-screen items-center justify-center">
+      <ButtonExample />
+    </div>
+  );
 }
 
-export default App
+export default App;
