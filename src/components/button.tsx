@@ -3,9 +3,6 @@ import { Ref } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../utils/cn';
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof buttonVariants>;
-
 const buttonVariants = cva(
   'inline-flex items-center rounded justify-center font-medium [&>[data-icon]]:fill-current focus-visible:outline-none',
   {
@@ -80,6 +77,9 @@ const buttonVariants = cva(
     },
   },
 );
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants>;
 
 function _Button(props: ButtonProps, ref: Ref<HTMLButtonElement>) {
   const { className, size, iconOnly, variant, children, disabled } = props;
