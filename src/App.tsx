@@ -1,10 +1,14 @@
 import './App.css';
-import { ButtonExample } from './examples/button-example';
+import { SideBar } from './sidebar';
+import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="container mx-auto flex h-screen items-center justify-center">
-      <ButtonExample />
+    <div className='flex'>
+      <SideBar />
+      <main className="container mx-auto flex h-screen items-center justify-center">
+        <Outlet />
+      </main>
     </div>
   );
 }
